@@ -1,3 +1,7 @@
+# Team 2 - Design system
+
+This is the repo for the team 2.
+
 # Hands on with design systems workshop
 
 This is a starter repositiry for the particpants of the workshop. Refer to [Handout page](https://hands-on-workshop.varya.me/handout/) for detailed info on how to work with this repo.
