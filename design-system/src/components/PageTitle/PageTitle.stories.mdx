@@ -1,5 +1,4 @@
-
-import { Meta, Canvas, Story } from '@storybook/addon-docs/blocks';
+import { ArgsTable, Meta, Canvas, Story } from "@storybook/addon-docs/blocks";
 
 import PageTitle from ".";
 
@@ -7,10 +6,12 @@ import PageTitle from ".";
 
 ## PageTitle
 
-TODO: add component description
+Page title component
 
 <Canvas>
-  <Story name="Default">
-    <PageTitle/>
-  </Story>
+    <Story name="Default">
+        <PageTitle>Page title</PageTitle>
+    </Story>
 </Canvas>
+
+<ArgsTable of={PageTitle} />
