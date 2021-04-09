@@ -5,21 +5,21 @@ import styled from "styled-components";
 import Thumbnail from "../Thumbnail";
 import { string } from "prop-types";
 
-/* ProductCard
+/* ProductItem
  *
  * TODO: add component description
  */
-const ProductCard = ({thumbSrc, thumbAlt, title, price, ...props}) => {
+const ProductItem = ({thumbSrc, thumbAlt, title, price, ...props}) => {
   return (
-    <StyledProductCard {...props}>
+    <StyledProductItem {...props}>
       <Thumbnail src={thumbSrc} alt={thumbAlt} />
       <h4>{title}</h4>
       <StyledP>{price}</StyledP>
-    </StyledProductCard>
+    </StyledProductItem>
   );
 };
 
-const StyledProductCard = styled.div`
+const StyledProductItem = styled.div`
   display: flex;
   flex-direction: column;
 `;
@@ -30,11 +30,11 @@ const StyledP = styled.p`
   margin-top: 8px;
 `;
 
-ProductCard.propTypes = {
+ProductItem.propTypes = {
   thumbSrc: string,
   thumbAlt: string,
   title: string,
   price: string,
 }
 
-export default ProductCard;
+export default ProductItem;

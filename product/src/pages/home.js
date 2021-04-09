@@ -4,7 +4,7 @@
  */
 import React from "react";
 import styled from "styled-components";
-import { Button, Icon, Avatar, PageTitle, ProductCard } from "design-system";
+import { Button, Icon, Avatar, PageTitle, ProductItem, Navigation } from "design-system";
 
 import avatarImg from "../assets/avatar.png";
 import item1Img from "../assets/item1.png";
@@ -14,12 +14,6 @@ import item4Img from "../assets/item4.png";
 
 const StyledDiv1 = styled.div`
   padding: 64px 40px;
-`;
-
-const StyledDiv2 = styled.div`
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 40px;
 `;
 
 const StyledDiv3 = styled.div`
@@ -83,12 +77,16 @@ const Home = () => {
   return (
     <div>
       <StyledDiv1>
-        <StyledDiv2>
-          <Avatar src={avatarImg}/>
-          <Button isOutline>
-            <Icon name="menu" />
-          </Button>
-        </StyledDiv2>
+        <Navigation 
+          prependChild={<Avatar src={avatarImg}/>}
+          appendChild={
+            <Button isOutline>
+              <Icon name="menu" />
+            </Button>
+          }
+          label=""
+        />
+        
         <PageTitle>Store</PageTitle>
 
         <StyledDiv3>
@@ -109,7 +107,7 @@ const Home = () => {
         </StyledDiv3>
         <StyledDiv5>
           {productsList.map(item => {
-            <ProductCard thumbSrc={item.thumbSrc} thumbAlt={item.thumbAlt} title={item.title} price={item.price} />
+            <ProductItem thumbSrc={item.thumbSrc} thumbAlt={item.thumbAlt} title={item.title} price={item.price} />
           })}
         </StyledDiv5>
       </StyledDiv1>

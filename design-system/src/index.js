@@ -9,7 +9,9 @@ export { default as GlobalStyle } from "./global.js";
 
 export { default as Avatar } from "./components/Avatar";
 export { default as Button } from "./components/Button";
+export { default as Header } from "./components/Header";
 export { default as Icon } from "./components/Icon";
+export { default as Navigation } from "./components/Navigation";
 export { default as PageTitle } from "./components/PageTitle";
-export { default as ProductCard } from "./components/ProductCard";
+export { default as ProductItem } from "./components/ProductItem";
 export { default as Thumbnail } from "./components/Thumbnail";
