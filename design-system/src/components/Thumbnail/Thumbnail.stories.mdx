@@ -1,4 +1,4 @@
-import { Meta, Canvas, Story } from "@storybook/addon-docs/blocks";
+import { ArgsTable, Meta, Canvas, Story } from "@storybook/addon-docs/blocks";
 
 import Thumbnail from ".";
 import item1Img from "../../../../product/src/assets/item1.png";
@@ -7,10 +7,14 @@ import item1Img from "../../../../product/src/assets/item1.png";
 
 ## Thumbnail
 
-TODO: add component description
+Thumbnail
 
 <Canvas>
     <Story name="Default">
         <Thumbnail src={item1Img} alt="" />
     </Story>
 </Canvas>
+
+## Props
+
+<ArgsTable of={Thumbnail} />
