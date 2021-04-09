@@ -50,25 +50,25 @@ const StyledButton = styled(Button)`
 
 const Home = () => {
   const productsList = [{
-      thumb: item1Img,
+      thumbSrc: item1Img,
       thumbAlt: "",
       title: "Nike Air Force 1 '07",
       price: "€95.00"
     },
     {
-      thumb: item2Img,
+      thumbSrc: item2Img,
       thumbAlt: "",
       title: "Nike Air Shadow Force",
       price: "€105.00"
     },
     {
-      thumb: item3Img,
+      thumbSrc: item3Img,
       thumbAlt: "",
       title: "Nike Air Force 1 '07",
       price: "€95.00"
     },
     {
-      thumb: item4Img,
+      thumbSrc: item4Img,
       thumbAlt: "",
       title: "Nike Air Force 1 '07",
       price: "€95.00"
@@ -106,9 +106,9 @@ const Home = () => {
           </StyledDiv4>
         </StyledDiv3>
         <StyledDiv5>
-          {productsList.map(item => {
-            <ProductItem thumbSrc={item.thumbSrc} thumbAlt={item.thumbAlt} title={item.title} price={item.price} />
-          })}
+          {productsList.map((item, index) => (
+            <ProductItem key={index} thumbSrc={item.thumbSrc} thumbAlt={item.thumbAlt} title={item.title} price={item.price} />
+          ))}
         </StyledDiv5>
       </StyledDiv1>
     </div>
