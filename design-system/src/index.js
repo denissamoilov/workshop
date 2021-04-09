@@ -14,4 +14,5 @@ export { default as Icon } from "./components/Icon";
 export { default as Navigation } from "./components/Navigation";
 export { default as PageTitle } from "./components/PageTitle";
 export { default as ProductItem } from "./components/ProductItem";
+export { default as Select } from "./components/Select";
 export { default as Thumbnail } from "./components/Thumbnail";
