@@ -4,17 +4,13 @@
  */
 import React from "react";
 import styled from "styled-components";
-import { Button, Icon, Avatar, PageTitle, ProductItem, Navigation } from "design-system";
+import { Button, Icon, Avatar, PageTitle, ProductItem, Navigation, Layout } from "design-system";
 
 import avatarImg from "../assets/avatar.png";
 import item1Img from "../assets/item1.png";
 import item2Img from "../assets/item2.png";
 import item3Img from "../assets/item3.png";
 import item4Img from "../assets/item4.png";
-
-const StyledDiv1 = styled.div`
-  padding: 64px 40px;
-`;
 
 const StyledDiv3 = styled.div`
   display: flex;
@@ -75,43 +71,41 @@ const Home = () => {
     },
   ]
   return (
-    <div>
-      <StyledDiv1>
-        <Navigation 
-          prependChild={<Avatar src={avatarImg}/>}
-          appendChild={
-            <Button isOutline>
-              <Icon name="menu" />
-            </Button>
-          }
-          label=""
-        />
-        
-        <PageTitle>Store</PageTitle>
+    <Layout>
+      <Navigation 
+        prependChild={<Avatar src={avatarImg}/>}
+        appendChild={
+          <Button isOutline>
+            <Icon name="menu" />
+          </Button>
+        }
+        label=""
+      />
+      
+      <PageTitle>Store</PageTitle>
 
-        <StyledDiv3>
-          <h4>All Product</h4>
+      <StyledDiv3>
+        <h4>All Product</h4>
 
-          <StyledDiv4>
-            <StyledButton color="transparent">
-              <Icon name="viewItem" width={24} height={16} />
-            </StyledButton>
-            <StyledButton color="transparent">
-              <Icon name="viewGrid" width={24} height={16} />
-            </StyledButton>
-            <StyledBorder />
-            <StyledButton color="transparent">
-              <Icon name="filter" width={24} height={16} />
-            </StyledButton>
-          </StyledDiv4>
-        </StyledDiv3>
-        <StyledDiv5>
-          {productsList.map((item, index) => (
-            <ProductItem key={index} thumbSrc={item.thumbSrc} thumbAlt={item.thumbAlt} title={item.title} price={item.price} />
-          ))}
-        </StyledDiv5>
-      </StyledDiv1>
-    </div>
+        <StyledDiv4>
+          <StyledButton color="transparent">
+            <Icon name="viewItem" width={24} height={16} />
+          </StyledButton>
+          <StyledButton color="transparent">
+            <Icon name="viewGrid" width={24} height={16} />
+          </StyledButton>
+          <StyledBorder />
+          <StyledButton color="transparent">
+            <Icon name="filter" width={24} height={16} />
+          </StyledButton>
+        </StyledDiv4>
+      </StyledDiv3>
+      <StyledDiv5>
+        {productsList.map((item, index) => (
+          <ProductItem key={index} thumbSrc={item.thumbSrc} thumbAlt={item.thumbAlt} title={item.title} price={item.price} />
+        ))}
+      </StyledDiv5>
+    </Layout>
   );
 };
 

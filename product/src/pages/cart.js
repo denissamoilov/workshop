@@ -4,14 +4,10 @@
  */
 import React from "react";
 import styled from "styled-components";
-import { Button, Icon } from "design-system";
+import { Button, Icon, Layout } from "design-system";
 
 import avatarImg from "../assets/avatar.png";
 import item1Img from "../assets/item1.png";
-
-const StyledDiv1 = styled.div`
-  padding: 64px 40px;
-`;
 
 const StyledImage = styled.img`
   width: 48px;
@@ -92,43 +88,41 @@ const BiggerP = styled.p`
 
 const Cart = () => {
   return (
-    <div>
-      <StyledDiv1>
-        <StyledDiv2>
-          <StyledImage src={avatarImg} />
-          <Button isOutline>
-            <Icon name="menu" />
-          </Button>
-        </StyledDiv2>
-        <Styledh1>Shopping Cart</Styledh1>
+    <Layout>
+      <StyledDiv2>
+        <StyledImage src={avatarImg} />
+        <Button isOutline>
+          <Icon name="menu" />
+        </Button>
+      </StyledDiv2>
+      <Styledh1>Shopping Cart</Styledh1>
 
-        <StyledDiv3>
-          <StyledImg src={item1Img} alt="" />
-          <StyledDiv4>
-            <Styledh6>Nike Air Force 1 '07</Styledh6>
-            <Styledh62>€95.00</Styledh62>
-            <StyledP>Men's Shoe, Black</StyledP>
-          </StyledDiv4>
-        </StyledDiv3>
+      <StyledDiv3>
+        <StyledImg src={item1Img} alt="" />
+        <StyledDiv4>
+          <Styledh6>Nike Air Force 1 '07</Styledh6>
+          <Styledh62>€95.00</Styledh62>
+          <StyledP>Men's Shoe, Black</StyledP>
+        </StyledDiv4>
+      </StyledDiv3>
+      <StyledBorder />
+
+      <StyledDiv5>
+        <Styledh2>Summary</Styledh2>
+        <StyledDiv6>
+          <p>Subtotal</p>
+          <h6>€95.00</h6>
+          <p>Estimated Delivery & Handling</p>
+          <h6>€0.00</h6>
+        </StyledDiv6>
         <StyledBorder />
-
-        <StyledDiv5>
-          <Styledh2>Summary</Styledh2>
-          <StyledDiv6>
-            <p>Subtotal</p>
-            <h6>€95.00</h6>
-            <p>Estimated Delivery & Handling</p>
-            <h6>€0.00</h6>
-          </StyledDiv6>
-          <StyledBorder />
-          <StyledDiv6>
-            <BiggerP>Total</BiggerP>
-            <h4>€95.00</h4>
-          </StyledDiv6>
-          <Button isStretched>Checkout</Button>
-        </StyledDiv5>
-      </StyledDiv1>
-    </div>
+        <StyledDiv6>
+          <BiggerP>Total</BiggerP>
+          <h4>€95.00</h4>
+        </StyledDiv6>
+        <Button isStretched>Checkout</Button>
+      </StyledDiv5>
+    </Layout>
   );
 };
 

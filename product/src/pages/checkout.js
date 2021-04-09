@@ -4,26 +4,14 @@
  */
 import React from "react";
 import styled from "styled-components";
-import { Button, Icon } from "design-system";
+import { colors } from "tokens";
+import { Button, Icon, Navigation } from "design-system";
 
 import cardImg from "../assets/Card.svg";
 
 const StyledDiv1 = styled.div`
   padding: 64px 40px 40px 40px;
-  background-color: rgba(254, 237, 233, 1);
-`;
-
-const StyledDiv2 = styled.div`
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 36px;
-`;
-const StyledDiv3 = styled.div`
-  flex-grow: 2;
-  display: flex;
-  justify-content: start;
-  padding: 0 24px;
-  align-items: center;
+  background-color: colors.primaryOrange10;
 `;
 
 const Styledh2 = styled.h2`
@@ -91,17 +79,19 @@ const Checkout = () => {
   return (
     <div>
       <StyledDiv1>
-        <StyledDiv2>
-          <Button isIcon color="#fff">
-            <Icon name="arrowBack" />
-          </Button>
-          <StyledDiv3>
-            <h4>Card</h4>
-          </StyledDiv3>
-          <Button isIcon color="#fff">
-            <Icon name="settings" />
-          </Button>
-        </StyledDiv2>
+        <Navigation
+          prependChild={
+            <Button isIcon color="#fff">
+              <Icon name="arrowBack" />
+            </Button>
+          }
+          label="Card"
+          appendChild={
+            <Button isIcon color="#fff">
+              <Icon name="settings" />
+            </Button>
+          }
+        />
         <Styledh2>Payment Method</Styledh2>
         <img src={cardImg} alt="card" />
         <StyledUl>
