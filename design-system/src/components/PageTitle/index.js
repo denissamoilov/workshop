@@ -6,13 +6,6 @@ import styled from "styled-components";
  *
  * TODO: add component description
  */
-const PageTitle = ({children, ...props}) => {
-  return <StyledPageTitle {...props}>{children}</StyledPageTitle>;
-};
-
-export const StyledPageTitle = styled.h1`
-  margin-bottom: 40px;
-  letter-spacing: -1.6px;
-`;
+const PageTitle = ({children, ...props}) => <h1 {...props}>{children}</h1>;
 
 export default PageTitle;

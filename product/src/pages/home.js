@@ -4,14 +4,13 @@
  */
 import React from "react";
 import styled from "styled-components";
-import { Button, Icon, Avatar, PageTitle } from "design-system";
+import { Button, Icon, Avatar, PageTitle, ProductCard } from "design-system";
 
 import avatarImg from "../assets/avatar.png";
 import item1Img from "../assets/item1.png";
 import item2Img from "../assets/item2.png";
 import item3Img from "../assets/item3.png";
 import item4Img from "../assets/item4.png";
-import { ProductCard, Thumbnail } from "design-system/src";
 
 const StyledDiv1 = styled.div`
   padding: 64px 40px;
@@ -85,13 +84,12 @@ const Home = () => {
     <div>
       <StyledDiv1>
         <StyledDiv2>
-          {/* <Avatar src={avatarImg}/> */}
+          <Avatar src={avatarImg}/>
           <Button isOutline>
             <Icon name="menu" />
           </Button>
         </StyledDiv2>
         <PageTitle>Store</PageTitle>
-        <Styledh1>Store</Styledh1>
 
         <StyledDiv3>
           <h4>All Product</h4>
