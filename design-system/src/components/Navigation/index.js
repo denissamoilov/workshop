@@ -11,8 +11,8 @@ const Navigation = ({label, prependChild, appendChild, ...props}) => {
   return (
     <StyledNavigation {...props}>
       {prependChild && prependChild}
-      {label && <h4>{label}</h4>}
-      {appendChild && appendChild}
+      {label && <StyledTitle>{label}</StyledTitle>}
+      {appendChild && <StyledAppend>{appendChild}</StyledAppend>}
     </StyledNavigation>
   );
 };
@@ -20,8 +20,16 @@ const Navigation = ({label, prependChild, appendChild, ...props}) => {
 const StyledNavigation = styled.div`
   align-items: center;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-start;
   margin-bottom: 40px;
+`;
+
+const StyledTitle = styled.h4`
+  margin: 0 24px;
+`;
+
+const StyledAppend = styled.div`
+  margin-left: auto;
 `;
 
 Navigation.propTypes = {

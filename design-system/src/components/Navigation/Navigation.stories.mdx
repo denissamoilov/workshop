@@ -1,4 +1,4 @@
-import { Meta, Canvas, Story } from "@storybook/addon-docs/blocks";
+import { Meta, Preview, Story, ArgsTable } from "@storybook/addon-docs/blocks";
 
 import Navigation from ".";
 import Avatar from "../Avatar";
@@ -13,8 +13,8 @@ import avatarImg from "../../../../product/src/assets/avatar.png";
 
 Navigation component
 
-<Canvas>
-    <Story name="Default">
+<Preview>
+    <Story name="With all components">
         <Navigation
             prependChild={<Avatar src={avatarImg} />}
             label="Navigation"
@@ -25,4 +25,24 @@ Navigation component
             }
         />
     </Story>
-</Canvas>
+    <Story name="Prepend component and title">
+        <Navigation
+            prependChild={<Avatar src={avatarImg} />}
+            label="Navigation"
+        />
+    </Story>
+    <Story name="Without label">
+        <Navigation
+            prependChild={<Avatar src={avatarImg} />}
+            appendChild={
+                <Button isOutline>
+                    <Icon name="menu" />
+                </Button>
+            }
+        />
+    </Story>
+</Preview>
+
+## Props
+
+<ArgsTable of={Navigation} />
