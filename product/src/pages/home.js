@@ -11,6 +11,7 @@ import item1Img from "../assets/item1.png";
 import item2Img from "../assets/item2.png";
 import item3Img from "../assets/item3.png";
 import item4Img from "../assets/item4.png";
+import { ProductCard, Thumbnail } from "design-system/src";
 
 const StyledDiv1 = styled.div`
   padding: 64px 40px;
@@ -43,21 +44,11 @@ const StyledDiv5 = styled.div`
   gap: 32px 24px;
 `;
 
-const StyledDiv6 = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
-
 const StyledBorder = styled.div`
   width: 1px;
   height: 16px;
   background-color: rgba(0, 0, 0, 0.1);
   margin: 0 8px;
-`;
-
-const StyledImg = styled.img`
-  max-width: 100%;
-  margin-bottom: 16px;
 `;
 
 const StyledButton = styled(Button)`
@@ -69,13 +60,32 @@ const StyledButton = styled(Button)`
   }
 `;
 
-const StyledP = styled.p`
-  color: #f15223;
-  font-weight: 700;
-  margin-top: 8px;
-`;
-
 const Home = () => {
+  const productsList = [{
+      thumb: item1Img,
+      thumbAlt: "",
+      title: "Nike Air Force 1 '07",
+      price: "€95.00"
+    },
+    {
+      thumb: item2Img,
+      thumbAlt: "",
+      title: "Nike Air Shadow Force",
+      price: "€105.00"
+    },
+    {
+      thumb: item3Img,
+      thumbAlt: "",
+      title: "Nike Air Force 1 '07",
+      price: "€95.00"
+    },
+    {
+      thumb: item4Img,
+      thumbAlt: "",
+      title: "Nike Air Force 1 '07",
+      price: "€95.00"
+    },
+  ]
   return (
     <div>
       <StyledDiv1>
@@ -104,26 +114,9 @@ const Home = () => {
           </StyledDiv4>
         </StyledDiv3>
         <StyledDiv5>
-          <StyledDiv6>
-            <StyledImg src={item1Img} alt="" />
-            <h4>Nike Air Force 1 '07</h4>
-            <StyledP>€95.00</StyledP>
-          </StyledDiv6>
-          <StyledDiv6>
-            <StyledImg src={item2Img} alt="" />
-            <h4>Nike Air Shadow Force</h4>
-            <StyledP>€105.00</StyledP>
-          </StyledDiv6>
-          <StyledDiv6>
-            <StyledImg src={item3Img} alt="" />
-            <h4>Nike Air Force 1 '07</h4>
-            <StyledP>€95.00</StyledP>
-          </StyledDiv6>
-          <StyledDiv6>
-            <StyledImg src={item4Img} alt="" />
-            <h4>Nike Air Force 1 '07</h4>
-            <StyledP>€95.00</StyledP>
-          </StyledDiv6>
+          {productsList.map(item => {
+            <ProductCard thumbSrc={item.thumbSrc} thumbAlt={item.thumbAlt} title={item.title} price={item.price} />
+          })}
         </StyledDiv5>
       </StyledDiv1>
     </div>

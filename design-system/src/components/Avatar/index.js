@@ -7,11 +7,9 @@ import styled from "styled-components";
  *
  * TODO: add component description
  */
-const Avatar = ({src, ...props}) => {
-  return <StyledAvatar src={src} />;
-};
+const Avatar = ({src, ...props}) => <StyledAvatar src={src} />;
 
-export const StyledAvatar = styled.img`
+const StyledAvatar = styled.img`
   width: 48px;
   height: 48px;
 `;

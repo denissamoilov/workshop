@@ -1,0 +1,22 @@
+import { Meta, Canvas, Story } from "@storybook/addon-docs/blocks";
+
+import ProductCard from ".";
+
+import item1Img from "../../../../product/src/assets/item1.png";
+
+<Meta title="Components/ProductCard" />
+
+## ProductCard
+
+TODO: add component description
+
+<Canvas>
+    <Story name="Default">
+        <ProductCard
+            thumbSrc={item1Img}
+            thumbAlt=""
+            title="Nike Air Force 1 '07"
+            price="€95.00"
+        />
+    </Story>
+</Canvas>
